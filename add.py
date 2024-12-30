@@ -1,5 +1,6 @@
 from post_request import *
 import pandas as pd
+from data_maker import *
 
 def addrol(comuna, csv):
     # Cargar el CSV en un DataFrame
@@ -19,4 +20,7 @@ def addrol(comuna, csv):
     # Devolver el DataFrame con la nueva columna
     return df
 
-addrol("SAN BERNARDO","san_bernardo_limpio.csv")
+data = addrol("SAN BERNARDO","san_bernardo_limpio.csv")
+
+# Guardar el DataFrame procesado como un archivo CSV
+data.to_csv("san_bernardo_rol.csv", index=False)

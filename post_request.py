@@ -23,8 +23,13 @@ def get_rol(comuna,calle,numero,detalle):
             "detalle":detalle}
     s = requests.post(url+"/sii/rol",data).content
     dict_str = s.decode("UTF-8")
-    dic = ast.literal_eval(dict_str)
-    claves = {'manzana','predio'}
-    return {clave:dic[clave] for clave in claves if clave in dic}
+    if dict_str != "":
+        print(dict_str)
+        dic = ast.literal_eval(dict_str)
+        claves = {'manzana','predio'}
+        return {clave:dic[clave] for clave in claves if clave in dic}
+    else:
+        print(dict_str)
+        return {'manzana':"",'predio':""}
 
 # latitud, longitud, avaluo, número de la calle
