@@ -38,4 +38,4 @@ def geojson_to_csv(geojson_file, csv_file):
     df.to_csv(csv_file, index=False)
 
 # Usar la función
-geojson_to_csv("/home/pipe/Downloads/san_bernardo.geojson", "/home/pipe/irene/san_bernardo.csv")
+geojson_to_csv("/home/pipe/Documents/irene/san_bernardo.geojson", "/home/pipe/Documents/irene/san_bernardo.csv")
