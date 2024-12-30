@@ -11,7 +11,7 @@ def addrol(comuna, csv):
     # Iterar sobre las filas del DataFrame y aplicar get_rol
     for _, row in df.iterrows():  # Usamos el _ en lugar de index
         rol_value = get_rol(comuna, row['addr:street'], row['addr:housenumber'], "")
-        rol_column.append(rol_value["manzana"]+rol_value["predio"])
+        rol_column.append(str(rol_value["manzana"])+str(rol_value["predio"]))
 
     # Asignar la columna 'rol' al DataFrame
     df['rol'] = rol_column
