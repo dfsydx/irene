@@ -23,4 +23,4 @@ def addrol(comuna, csv):
 data = addrol("SAN BERNARDO","san_bernardo_limpio.csv")
 
 # Guardar el DataFrame procesado como un archivo CSV
-data.to_csv("san_bernardo_rol.csv", index=False)
+data.to_csv("san_bernardo_rol.csv", index=False) 
