@@ -1,2 +1,3 @@
 *.csv
+*.geojson
 api_link.py
