@@ -27,6 +27,4 @@ def get_rol(comuna,calle,numero,detalle):
     claves = {'manzana','predio'}
     return {clave:dic[clave] for clave in claves if clave in dic}
 
-print(url)
-
 # latitud, longitud, avaluo, número de la calle
