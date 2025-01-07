@@ -20,9 +20,6 @@ def addrol(comuna, csv):
     df['rol'] = rol_column
 
     # Devolver el DataFrame con la nueva columna
-    return df
+    return df.to_csv("addrol_"+csv, index=False)
 
 data = addrol("SAN BERNARDO","san_bernardo_limpio.csv")
-
-# Guardar el DataFrame procesado como un archivo CSV
-data.to_csv("san_bernardo_rol.csv", index=False)

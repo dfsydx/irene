@@ -34,11 +34,10 @@ def get_rol(comuna,calle,numero,detalle):
             print(dict_str)
             i = i+1
             print(i)
+            print("except in "+str(i))
             return {'manzana':"",'predio':""}
     else:
-        print("ok")
+        print("no se encontró el rol")
         return {'manzana':"",'predio':""}
-
-print(get_rol("SAN BERNARDO","Eyzaguirre","1094",""))
 
 # latitud, longitud, avaluo, número de la calle
